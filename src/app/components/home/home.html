@@ -1,0 +1,282 @@
+<!-- home.html -->
+ <section id="home" class="home">
+    <header class="video_portada">
+      <video id="heroVideo" class="hero-video__media"
+            autoplay muted loop playsinline controls preload="metadata"
+            poster="assets/video_portada.jpg">
+        <source src="assets/video_portada.mp4" type="video/mp4">
+        <source src="assets/video_portada.webm" type="video/webm">
+        Tu navegador no soporta video.
+      </video>
+
+      <script>
+        (function(){
+          const v = document.getElementById('heroVideo');
+          if(!v) return;
+          v.addEventListener('loadeddata', ()=>console.log('Video: loadeddata'));
+          v.addEventListener('canplay', ()=>console.log('Video: canplay'));
+          v.addEventListener('error', ()=>console.error('Video load error', v.error));
+          console.log('Video attributes:', { muted: v.muted, paused: v.paused, src: v.currentSrc });
+        })();
+      </script>
+      
+      
+      <div id="contenedortexto" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 64px);text-align:center;">
+        ¡Transforma la experiencia escolar!
+        <div id="flip">
+          <div><div>Seguimiento</div></div>
+          <div><div>Rangos</div></div>
+          <div><div>Éxito</div></div>
+        </div>
+        ¡Motiva y reconoce el progreso de cada alumno!
+    </div>
+    </header>
+ </section>
+
+
+<section id="Facilidad" class="facilidad">
+  
+  <!-- Texto principal (mejor diseño, minimalista) -->
+    <div class="container">
+      <div id="textos" class="textos">
+        <h1>¿Creado para facilitarte la gestión educativa?</h1>
+        <p class="lead">Este sistema permite a los administradores y docentes llevar un control completo de los alumnos, calificaciones, y reportes. Ofrece una interfaz intuitiva y moderna para facilitar la gestión académica.</p>
+      </div>
+
+      <!-- Características -->
+      <div class="grid-container">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="title">Eficiencia</div>
+            <div class="icon" aria-hidden="true"><i class="fa fa-bolt"></i></div>
+          </div>
+          <div class="content"><p>Centraliza la información y reduce el tiempo de gestión académica.</p></div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="title">Fácil de usar</div>
+            <div class="icon" aria-hidden="true"><i class="fa fa-user-check"></i></div>
+          </div>
+          <div class="content"><p>Interfaz intuitiva que facilita la adaptación de docentes y administradores.</p></div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="title">Accesibilidad</div>
+            <div class="icon" aria-hidden="true"><i class="fa fa-globe"></i></div>
+          </div>
+          <div class="content"><p>Accesible desde cualquier dispositivo para gestión flexible y eficiente.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="gestor-section">
+  <h1>¡Explora el Gestor Escolar!</h1>
+  <div class="gestor-grid">
+    <div class="gestor-card">
+      <img src="assets/Publicidad_1.png" alt="Impulsa el conocimiento">
+    </div>
+    <div class="gestor-card">
+      <img src="assets/Publicidad_2.png" alt="Impulsa el conocimiento">
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+<section id="multimedia" class="multimedia">
+  <section class="nature-section">
+    <h1>Control de acceso</h1>
+    <div class="content">
+      <p>Gestiona quién tiene acceso a qué recursos dentro de la plataforma educativa.</p>
+    </div>
+    <div class="img">
+      <img src="assets/Inicio_sesion.png" alt="Inicio de sesión">
+    </div>
+  </section>
+  <section class="nature-section">
+    <h1>Panel de administradores</h1>
+    <div class="content">
+      <p>Los administradores pueden gestionar usuarios aprobándolos, asignar nuevos administradores para el acceso a la plataforma.</p>
+    </div>
+    <div class="img">
+      <img src="assets/Administrador.png" alt="Inicio de sesión">
+    </div>
+  </section>
+
+
+<div class="container-fluid text-center" style="margin-top: 2rem;">
+  <h3>Descarga un ejemplo de boleta</h3>
+  <p>Haz clic en el botón para obtener un archivo de ejemplo con el formato de boletas.</p>
+
+  <!-- Botón de descarga -->
+  <a href="assets/acta_calificaciones_2_B_2025-09.pdf" download>
+    <button class="download-btn noselect">
+      <span class="btn-text">Descargar</span>
+      <span class="btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+        </svg>
+      </span>
+      <span class="download-animation"></span>
+    </button>
+  </a>
+</div>
+
+
+
+</section>
+
+
+
+<section id="testimonios" class="testimonios">
+  <div class="container">
+    <h2 class="testimonials-title">Lo que dicen nuestros usuarios</h2>
+
+    <div class="outerdiv">
+      <div class="innerdiv">
+        <!-- Testimonio 1 -->
+        <div class="div1 eachdiv">
+          <div class="userdetails">
+            <div class="imgbox">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+            </div>
+            <div class="detbox">
+              <p class="name">Luis Martínez</p>
+              <p class="designation">Profesor</p>
+            </div>
+          </div>
+          <div class="review">
+            <h4>Mejora la gestión escolar notablemente</h4>
+            <p>“El sistema permite centralizar la información de alumnos y clases, lo que ahorra muchísimo tiempo en la administración y planificación educativa.”</p>
+          </div>
+        </div>
+        
+        <!-- Testimonio 2 -->
+        <div class="div2 eachdiv">
+          <div class="userdetails">
+            <div class="imgbox">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+            </div>
+            <div class="detbox">
+              <p class="name">Ana Gómez</p>
+              <p class="designation">Directora</p>
+            </div>
+          </div>
+          <div class="review">
+            <h4>Fácil de usar y muy intuitivo</h4>
+            <p>“Desde el primer día, tanto docentes como administradores se adaptaron al sistema. La interfaz es clara y la navegación muy sencilla.”</p>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="div3 eachdiv">
+          <div class="userdetails">
+            <div class="imgbox">
+              <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="">
+            </div>
+            <div class="detbox">
+              <p class="name dark">Carlos Pérez</p>
+              <p class="designation dark">Estudiante</p>
+            </div>
+          </div>
+          <div class="review dark">
+            <h4>Motivador y moderno</h4>
+            <p>“Me encanta el sistema de rangos estudiantiles. Me motiva a mejorar mis calificaciones y participar más en clase.”</p>
+          </div>
+        </div>
+
+        <!-- Testimonio 4 -->
+        <div class="div4 eachdiv">
+          <div class="userdetails">
+            <div class="imgbox">
+              <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="">
+            </div>
+            <div class="detbox">
+              <p class="name dark">María López</p>
+              <p class="designation dark">Padre de familia</p>
+            </div>
+          </div>
+          <div class="review dark">
+            <h4>Información siempre disponible</h4>
+            <p>“Puedo revisar calificaciones, tareas y asistencia de mis hijos desde cualquier dispositivo, lo que me da tranquilidad y control.”</p>
+          </div>
+        </div>
+
+        <!-- Testimonio 5 -->
+        <div class="div5 eachdiv">
+          <div class="userdetails">
+            <div class="imgbox">
+              <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="">
+            </div>
+            <div class="detbox">
+              <p class="name">Fernando Ruiz</p>
+              <p class="designation">Coordinador académico</p>
+            </div>
+          </div>
+          <div class="review">
+            <h4>Todo en un solo lugar</h4>
+            <p>“Gestionar calificaciones, reportes y seguimiento estudiantil es mucho más sencillo. El sistema optimiza nuestros procesos administrativos.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-section" id="contacto">
+  <div class="contact-grid">
+    <!-- Contenedor del formulario -->
+    <div class="contact-wrapper">
+      <!-- Títulos -->
+      <h2>Contáctanos</h2>
+      <p class="muted">¿Tienes dudas o sugerencias? Envíanos un mensaje y te responderemos pronto.</p>
+
+      <!-- Formulario -->
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mldwzddo" method="POST" novalidate>
+        <input type="text" name="name" id="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required />
+        <textarea name="message" id="message" rows="6" placeholder="Escribe tu mensaje" required></textarea>
+      
+        <!-- honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-actions" style="display: flex; gap: 12px; align-items: center; justify-content: flex-start;">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <a href="https://wa.me/5212461265600?text=Hola%20quiero%20mas%20información%20de%20servicios." target="_blank" rel="noopener" class="btn-whatsapp" aria-label="Contactar por WhatsApp">
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:10px;fill:currentColor">
+              <path d="M20.52 3.48A11.94 11.94 0 0012 .5C5.73.5.99 5.24.99 11.5c0 2.04.54 3.95 1.57 5.63L.5 23.5l6.56-1.72A11.95 11.95 0 0012 23.5c6.27 0 11.01-4.74 11.01-11 0-2.95-1.16-5.71-3.49-7.02zM12 21.5c-1.72 0-3.36-.46-4.78-1.33l-.34-.2-3.9 1.03 1.03-3.8-.22-.35A9.2 9.2 0 012.8 11.5 9.2 9.2 0 1111.96 20.5zM17.2 14.3c-.27-.14-1.6-.8-1.85-.89-.25-.09-.43-.14-.62.14-.19.28-.74.89-.9 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.86-.16-.28-.02-.43.12-.57.12-.12.27-.32.41-.48.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.07-.22-.54-.45-.46-.62-.47l-.53-.01c-.18 0-.47.07-.72.34-.25.27-.96.93-.96 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.67 4.02 3.25 1.27 3.25.85 3.84.8.6-.05 1.95-.8 2.23-1.57.28-.77.28-1.43.2-1.56-.08-.13-.28-.19-.56-.33z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div id="formStatus" class="form-status" aria-live="polite" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <script>
+        (function(){
+          const form = document.getElementById('contactForm');
+          const status = document.getElementById('formStatus');
+          if(!form) return;
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            status.hidden = false; status.textContent = 'Enviando…';
+            const data = new FormData(form);
+            try {
+              const res = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' } });
+              if (res.ok) { status.textContent = 'Gracias — tu mensaje fue enviado.'; form.reset(); }
+              else { const json = await res.json().catch(()=>{}); status.textContent = json?.error ? json.error : 'Error al enviar.'; }
+            } catch (err) {
+              status.textContent = 'Error de red. Intenta más tarde.';
+            }
+            setTimeout(()=>{ status.hidden = true; status.textContent = ''; }, 5000);
+          });
+        })();
+      </script>
+

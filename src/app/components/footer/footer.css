@@ -1,0 +1,87 @@
+/* ---------- Layout base para evitar solapamiento ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  position: relative;
+  background: #252736;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.footer-contact {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-contact a {
+  color: #e30613;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* --------- RESPONSIVO --------- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  .footer-content {
+    max-width: 95vw;
+    gap: 0.3rem;
+  }
+  .footer-info,
+  .footer-contact {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    max-width: 100vw;
+    gap: 0.2rem;
+  }
+  .footer-info,
+  .footer-contact {
+    font-size: 0.85rem;
+    padding: 0 4px;
+  }
+}

@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --c-white: #FFFFFF;
+  --c-black: #000000;
+  --c-gray-900: #F9F9F9; /* Fondo principal claro */
+  --c-gray-600: #555555; /* Texto secundario oscuro */
+  --c-gray-100: #E5E5E5; /* Gris claro */
+  --c-accent: #E30613;   /* Rojo acento */
+}
+
+/* --------- ESTILOS BASE --------- */
+body {
+  background: var(--c-gray-900);
+  color: var(--c-black);
+  font: 16px/1.6 system-ui, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Secciones */
+.section-alt {
+  background: var(--c-white);
+}
+.muted {
+  color: var(--c-gray-600);
+}
+
+/* Links */
+a {
+  color: var(--c-black);
+  text-decoration: underline 1px solid var(--c-gray-600);
+}
+a:hover {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  color: var(--c-accent);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: .85rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--c-accent);
+  color: var(--c-white);
+}
+.btn-primary:hover {
+  background: var(--c-black);
+  color: var(--c-white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c-black);
+  border: 2px solid var(--c-accent);
+}
+.btn-outline:hover {
+  background: var(--c-accent);
+  color: var(--c-white);
+}
+
+/* Accentos */
+.rule {
+  height: 2px;
+  background: var(--c-accent);
+  width: 72px;
+  border-radius: 2px;
+}
+
+.badge {
+  background: var(--c-accent);
+  color: var(--c-white);
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  font-size: .8rem;
+}
+
+/* --------- RESPONSIVIDAD --------- */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles grandes (≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+  .rule {
+    width: 56px;
+  }
+}
+
+/* Móviles pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .btn {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
