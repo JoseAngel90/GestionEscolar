@@ -1,4 +1,3 @@
-
 @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
 
 
@@ -116,34 +115,15 @@ body{
   filter: contrast(.95) saturate(.98);
 }
 
-/* permitir interacción con el video y pasar clics desde el overlay/texto */
-.video_portada::before{ /* si tienes overlay, que no capture clics */
-  pointer-events: none;
-}
+
 
 /* accesibilidad: detener animación / cambio de comportamiento si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce){
   .hero-video__media{ object-fit: contain; }
 }
 
-/* asegurar que el video pueda recibir clicks (controles) */
-.hero-video__media{
-  pointer-events: auto; /* antes estaba none */
-  z-index: 0;
-}
 
-/* texto encima no debe bloquear clics; solo sus elementos interactivos sí */
-#contenedortexto{
-  pointer-events: none; /* deja pasar clics al video */
-  z-index: 2;
-}
 
-/* Habilitar interacción solo en botones/enlaces dentro del texto (p. ex. mute) */
-#contenedortexto button,
-#contenedortexto a,
-#contenedortexto .video-mute {
-  pointer-events: auto;
-}
 
 /* Asegura que el texto del hero esté por delante y legible */
 #contenedortexto{
@@ -840,5 +820,56 @@ a:link,a:active,a:visited,a:hover{
   .form-actions .btn-whatsapp{
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Ocultar controles/botones dentro del hero/video (solo visualmente) */
+.video_portada .download-actions,
+.video_portada .btn,
+.video_portada .btn-whatsapp,
+.video_portada .btn-acta,
+.video_portada .download-btn,
+.video_portada .msx-wrap,
+.video_portada .msx-label,
+.video_portada .acta-download,
+.video_portada .carousel-btn,
+.video_portada .controls,
+.video_portada .play-button,
+.video_portada .download-animation {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.video_presentacion {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid transparent;
+  background: linear-gradient(145deg, #fff, #f9f9f9) padding-box,
+              linear-gradient(145deg, #6a11cb, #2575fc) border-box;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.video_presentacion:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .video_presentacion {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video_presentacion {
+    border-radius: 10px;
   }
 }

@@ -1,36 +1,27 @@
 <!-- home.html -->
  <section id="home" class="home">
     <header class="video_portada">
-      <video id="heroVideo" class="hero-video__media"
-            autoplay muted loop playsinline controls preload="metadata"
-            poster="assets/video_portada.jpg">
-        <source src="assets/video_portada.mp4" type="video/mp4">
-        <source src="assets/video_portada.webm" type="video/webm">
-        Tu navegador no soporta video.
-      </video>
+  <!-- Video optimizado: webm + mp4, SIN controls para ocultar botones nativos -->
+  <video id="heroVideo" class="hero-video__media"
+         autoplay muted loop playsinline preload="auto"
+         poster="assets/portada.gif" role="img" aria-label="Video de portada">
+    <source src="assets/portada.gif" type="video/webm">
+    <source src="assets/portada.gif" type="video/mp4">
+    <!-- Fallback: mostrar GIF si el navegador no reproduce el video -->
+    <img src="assets/portada.gif" alt="Portada animada" class="hero-video__fallback">
+    Tu navegador no soporta video.
+  </video>
 
-      <script>
-        (function(){
-          const v = document.getElementById('heroVideo');
-          if(!v) return;
-          v.addEventListener('loadeddata', ()=>console.log('Video: loadeddata'));
-          v.addEventListener('canplay', ()=>console.log('Video: canplay'));
-          v.addEventListener('error', ()=>console.error('Video load error', v.error));
-          console.log('Video attributes:', { muted: v.muted, paused: v.paused, src: v.currentSrc });
-        })();
-      </script>
-      
-      
-      <div id="contenedortexto" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 64px);text-align:center;">
-        ¡Transforma la experiencia escolar!
-        <div id="flip">
-          <div><div>Seguimiento</div></div>
-          <div><div>Rangos</div></div>
-          <div><div>Éxito</div></div>
-        </div>
-        ¡Motiva y reconoce el progreso de cada alumno!
+  <div id="contenedortexto" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 64px);text-align:center;">
+    ¡Transforma la experiencia escolar!
+    <div id="flip">
+      <div><div>Seguimiento</div></div>
+      <div><div>Rangos</div></div>
+      <div><div>Éxito</div></div>
     </div>
-    </header>
+    ¡Motiva y reconoce el progreso de cada alumno!
+  </div>
+</header>
  </section>
 
 
@@ -108,25 +99,29 @@
 
 
 <div class="container-fluid text-center" style="margin-top: 2rem;">
-  <h3>Descarga un ejemplo de boleta</h3>
-  <p>Haz clic en el botón para obtener un archivo de ejemplo con el formato de boletas.</p>
-
-  <!-- Botón de descarga -->
-  <a href="assets/acta_calificaciones_2_B_2025-09.pdf" download>
-    <button class="download-btn noselect">
-      <span class="btn-text">Descargar</span>
-      <span class="btn-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-        </svg>
-      </span>
-      <span class="download-animation"></span>
-    </button>
-  </a>
+  <h1 style="color: #007bff;">Ve nuestro video de demostracion del gestor !</h1>
+  <video class="video_presentacion" controls>
+    <source src="assets/video_presentacion.mp4" type="video/mp4">
+  </video>
 </div>
 
 
-
+<div class="container-fluid text-center" style="margin-top: 2rem;">
+  <h3>Descarga un ejemplo de boleta</h3>
+  <p>Haz clic en el botón para obtener un archivo de ejemplo con el formato de boletas.</p>
+    <!-- Botón de descarga -->
+    <a href="assets/acta_calificaciones_2_B_2025-09.pdf" download>
+      <button class="download-btn noselect">
+        <span class="btn-text">Descargar</span>
+        <span class="btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+          </svg>
+        </span>
+        <span class="download-animation"></span>
+      </button>
+    </a>
+  </div>
 </section>
 
 
