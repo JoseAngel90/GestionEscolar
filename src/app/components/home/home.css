@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
@@ -326,7 +326,7 @@ body{
   max-width: flex;
   margin: 40px auto;
   padding: 0 16px;
-  background: linear-gradient(135deg, #f0f4ff, #e8f0fe); /* fondo sutil */
+  background: linear-gradient(135deg, #ffffff, #ffffff); /* fondo sutil */
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
