@@ -52,10 +52,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "GestorEscolar:build:production"
+              "buildTarget": "Soltex:build:production"
             },
             "development": {
-              "buildTarget": "GestorEscolar:build:development"
+              "buildTarget": "Soltex:build:development"
             }
           },
           "defaultConfiguration": "development"
